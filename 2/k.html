@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merry Christmas, My Love</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #002b5c, #001a33);
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #fff;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    .box h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ff6f61;
+    }
+    .box p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #fff;
+    }
+    .box button {
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .box button:hover {
+      background: #e0554d;
+      transform: scale(1.1);
+    }
+    .gift-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #ff6f61;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      color: #fff;
+      font-size: 1.2em;
+      padding: 20px;
+      transition: transform 0.5s ease-out;
+    }
+    .gift-box.show {
+      display: block;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .gift-box h2 {
+      margin-top: 20px;
+      font-size: 1.8em;
+    }
+    .gift-box .emoji {
+      font-size: 3em;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Merry Christmas, Love ❤️</h1>
+    <p>
+      You make my life magical every day, but today is extra special because I get to celebrate it with you in my heart. 
+      Here's to love, laughter, and making unforgettable memories together this holiday season. 
+    </p>
+    <button id="loveButton">Open Your Gift 🎁</button>
+  </div>
+
+  <div class="gift-box" id="giftBox">
+    <div class="emoji">🎁✨</div>
+    <h2>You're My Greatest Gift</h2>
+    <p>Wishing you all the happiness and love in the world. ❤️</p>
+  </div>
+
+  <script>
+    // Show the gift box when the button is clicked
+    document.getElementById('loveButton').addEventListener('click', () => {
+      const giftBox = document.getElementById('giftBox');
+      giftBox.classList.add('show');
+    });
+  </script>
+</body>
+</html>
